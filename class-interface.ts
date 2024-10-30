@@ -5,6 +5,8 @@ interface Comments  {
 
 interface View  {
     viewsCount: number,
+    showViews() : void
+
 }
 
 class Facebook implements Comments, View {
@@ -13,6 +15,9 @@ class Facebook implements Comments, View {
         this.likesOnComment = likesOnComment
         this.addedProps = addedProps
         this.viewsCount = viewsCount
+    }
+    showViews(){
+        console.log(this.viewsCount)
     }
 }
 
